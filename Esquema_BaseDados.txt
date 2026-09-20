@@ -1,0 +1,113 @@
+-- Nomes: Mariana Polícia (22308010), Tiago Guerreiro (22307998)
+-- Esquema de base de dados
+
+CREATE TABLE cliente(
+	cliente_id INT PRIMARY KEY,
+	nome VARCHAR(30),
+	email VARCHAR(50),
+	telefone VARCHAR(15),
+	morada VARCHAR(90),
+	nif VARCHAR(20)
+);
+
+create table funcionario(
+	func_id INT PRIMARY KEY,
+	nome VARCHAR(60),
+	email VARCHAR(70),
+	cargo VARCHAR(50)
+
+);
+
+
+create table equipamentos(
+	equip_id INT PRIMARY KEY,
+	nome VARCHAR(60),
+	tipo VARCHAR(60),
+	dimensao VARCHAR(40),
+	cap INT,
+	estado VARCHAR(50),
+	ppd INT
+
+);
+
+create table aluguer(
+	alug_id INT PRIMARY KEY,
+	cliente_id integer,
+	func_id INT,
+    equip_id INT,
+	dt_inicio DATE,
+	dt_fim DATE,
+	status VARCHAR(40),
+	valor INT,
+	locar VARCHAR(60),
+	FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id),
+	FOREIGN KEY (func_id) references funcionario(func_id),
+    FOREIGN KEY (equip_id) REFERENCES equipamentos(equip_id)
+);
+
+create table inventario(
+	invent_id INT PRIMARY KEY,
+	equip_id INT,
+	qnt_disp INT,
+	local VARCHAR(70),
+	status VARCHAR(70),
+	dt_entrada DATE,
+	foreign key (equip_id) references equipamentos(equip_id)
+);
+
+
+Create table cartao(
+	nr_cartao INT PRIMARY KEY,
+	cliente_id INT,
+	promo_id INT,
+	nome VARCHAR(60),
+	condicao VARCHAR(90),
+	desconto INT,
+	foreign key (cliente_id) references cliente(cliente_id)
+);
+
+create table fatura(
+	nr_fatura INT PRIMARY KEY,
+	alug_id INT,
+	func_id INT,
+	nr_cartao INT,
+	dt_emissao DATE,
+    nif INT,
+    iva INT,
+	metodo VARCHAR(70),
+    vlr_total INT,
+	sub_total INT,
+	foreign key (alug_id) references aluguer(alug_id),
+  	foreign key (func_id) references funcionario(func_id),
+	foreign key (nr_cartao) references cartao(nr_cartao)
+);
+
+create table recibo(
+	nr_recibo INT PRIMARY KEY,
+	nr_fatura INT,
+	dt_emissao DATE,
+	foreign key (nr_fatura) references fatura(nr_fatura)
+); 
+
+create table mantem(
+	manut_id INT PRIMARY KEY,
+	func_id INT,
+	equip_id INT,
+	tipo_manut VARCHAR(80),
+	custo INT,
+	descricao VARCHAR(80),
+	status VARCHAR(60),
+	dt_manut DATE,
+	foreign key (func_id) references funcionario(func_id),
+	foreign key (equip_id) references equipamentos(equip_id)
+);
+
+create table reserva(
+	reserva_id INT PRIMARY KEY,
+	equip_id INT,
+	alug_id INT,
+	dt_inicio DATE,
+	dt_fim DATE,
+	foreign key (equip_id) references equipamentos(equip_id),
+	foreign key (alug_id) references aluguer(alug_id)
+);
