@@ -52,7 +52,10 @@ The project includes analytical queries covering realistic operational needs:
 
 ## Academic Context
 
-This project was developed collaboratively as part of the Database Systems course at ISMAT.
+* **Institution:** Instituto Superior Manuel Teixeira Gomes (ISMAT)
+* **Degree:** BSc in Computer Science and Engineering (Licenciatura em Engenharia Informática)
+* **Course:** Algorithms and Data Structures (AED)
+* **Author:** Mariana Polícia and Tiagoo Guerreiro
 
 ### My Contribution
 
