@@ -1,4 +1,3 @@
--- Nomes: Mariana Polícia (22308010), Tiago Guerreiro (22307998)
 -- Triggers e store procedures
 
 

@@ -1,5 +1,4 @@
--- Nomes: Mariana Polícia (22308010), Tiago Guerreiro (22307998)
--- Esquema de base de dados
+-- Schema of the database
 
 CREATE TABLE cliente(
 	cliente_id INT PRIMARY KEY,

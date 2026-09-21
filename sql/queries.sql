@@ -1,5 +1,4 @@
--- Nomes: Mariana Polícia (22308010), Tiago Guerreiro (22307998)
--- Interrogações 
+-- Questions 
 
 --1. Quais clientes realizaram alugueres no último mês?
 
@@ -41,7 +40,7 @@ SELECT equipamentos.nome, equipamentos.estado
 FROM equipamentos
 WHERE equipamentos.estado = 'Manutenção';
 
---6. Quantos clientes
+--6. Quantos clientes têm a promoção 2?
 
 SELECT COUNT(DISTINCT cliente.cliente_id) AS total_clientes
 FROM cliente
