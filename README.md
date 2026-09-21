@@ -50,6 +50,17 @@ The project includes analytical queries covering realistic operational needs:
 7. **Staff Productivity:** Tracking the total volume of events handled per employee.
 8. **Financial Reporting:** Calculating periodic revenue across given business cycles.
 
+## Academic Context
+
+This project was developed collaboratively as part of the Database Systems course at ISMAT.
+
+### My Contribution
+
+My contributions included database modelling, SQL query development, and testing of database functions and triggers.
+
+## Notes
+* **Language context:** As this project was developed for a Portuguese university course, database entities, column names, and internal comments are written in Portuguese. The documentation is provided in English for international review.
+
 ---
 
 ## Repository Structure
