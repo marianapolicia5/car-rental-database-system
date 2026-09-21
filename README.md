@@ -81,13 +81,3 @@ My contributions included database modelling, SQL query development, and testing
     ├── question_7.csv
     └── question_8.csv
 
-## Academic Context
-
-This project was developed collaboratively as part of the Database Systems course at ISMAT.
-
-### My Contribution
-
-My contributions included database modelling, SQL query development, and testing of database functions and triggers.
-
-## Notes
-* **Language context:** As this project was developed for a Portuguese university course, database entities, column names, and internal comments are written in Portuguese. The documentation is provided in English for international review.
